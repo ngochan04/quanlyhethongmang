@@ -1,5 +1,3 @@
-
-    <script>
        document.addEventListener("DOMContentLoaded", function () {
     function showContent(part) {
         const title = document.getElementById("content-title");
@@ -1057,5 +1055,3 @@
         item.addEventListener("click", () => showContent(index + 1));
     });
 });
-
-        </script>
