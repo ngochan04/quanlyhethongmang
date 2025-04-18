@@ -1,0 +1,243 @@
+/* Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Căn chỉnh tổng thể */
+body {
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* Container chính */
+.container {
+    width: 85%;
+    max-width: 1100px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề chính */
+.main-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 30px;
+}
+
+/* Giới thiệu & Liên hệ */
+.intro-contact {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.intro, .contact {
+    background: #f0f4f8;
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Phần Dự Án */
+.projects {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.project-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Danh sách dự án */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 10px;
+}
+
+/* Các ô dự án */
+/* Các ô dự án với viền chuyển màu */
+.project-item {
+    padding: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid transparent;
+}
+
+/* Mặc định các mục */
+.project-item {
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #003366; /* Màu viền mặc định */
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: #003366; /* Màu chữ mặc định */
+}
+
+
+/* Khi được chọn */
+.active-content {
+    color: white !important; /* Chữ trắng để dễ đọc */
+}
+
+/* Nội dung hiển thị */
+.content-box {
+    display: none;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-top: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+
+
+/* Gradient màu nhẹ nhàng với viền từ nhạt đến đậm */
+.item1 { background: #f9f9f9; color: #005fac; border-color: #bbdefb; }
+.item2 { background: #f9f9f9; color: #055aa4; border-color: #90caf9; }
+.item3 { background: #f9f9f9; color: #054586; border-color: #64b5f6; }
+.item4 { background: #f9f9f9; color: #073c79f0; border-color: #42a5f5; }
+.item5 { background: #f9f9f9; color:#032c5b; border-color: #1e88e5; }
+.item6 { background: #f9f9f9; color: rgb(18, 14, 46); border-color: #1976d2; }
+.item7 { background: #f9f9f9; color: rgb(7, 1, 47); border-color: #1565c0; }
+.item8 { background: #f9f9f9; color: rgb(6, 10, 87); border-color: #0d47a1; }
+
+/* Hover với viền đậm hơn */
+.project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.15);
+    border-width: 4px;
+}
+
+/* Hộp hiển thị nội dung */
+.content-box {
+    display: none;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #f5f7fa;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề nội dung chương thay đổi theo chương tương ứng */
+.content-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Tương ứng màu sắc của chương */
+.content1 { background: #bbdefb; color: #004c8c; }
+.content2 { background: #90caf9; color: #003c72; }
+.content3 { background: #64b5f6; color: #003060; }
+.content4 { background: #42a5f5; color: #002550; }
+.content5 { background: #1e88e5; color: white; }
+.content6 { background: #1976d2; color: white; }
+.content7 { background: #1565c0; color: white; }
+.content8 { background: #0d47a1; color: white; }
+
+#project-content {
+    display: none;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-left: 5px solid #007bff; /* Viền trái tạo điểm nhấn */
+    margin-top: 15px;
+}
+
+#content-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#content-text {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left; /* Căn trái toàn bộ nội dung */
+    color: #444;
+}
+
+#content-text h4 {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #007bff; /* Màu xanh nổi bật cho tiêu đề */
+}
+
+#content-text ul {
+    padding-left: 20px; /* Đẩy danh sách sang trái */
+}
+
+#content-text ul li {
+    margin-bottom: 8px;
+    list-style: disc; /* Chấm tròn đầu dòng cho danh sách */
+}
+
+img{
+    padding: 15px;
+}
+h4{
+    padding-bottom: 1rem;
+}
+/* Responsive tối ưu cho màn hình nhỏ */
+@media screen and (max-width: 1024px) {
+    .intro-contact {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .project-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .project-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
