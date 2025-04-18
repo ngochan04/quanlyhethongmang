@@ -30,44 +30,43 @@
             <p class="project-description">Dự án này tập trung vào xây dựng và quản lý hệ thống Windows Server cùng Firewall, đảm bảo bảo mật mạng và vận hành ổn định.</p>
             
             <div class="project-list">
-                <div class="project-item item1" onclick="showContent(1)">Phần 1: Tổng quan dự án</div>
-                <div class="project-item item2" onclick="showContent(2)">Phần 2: Mô Hình Mạng</div>
-                <div class="project-item item3" onclick="showContent(3)">Phần 3: Windows Server</div>
-                <div class="project-item item4" onclick="showContent(4)">Phần 4: Quản Lý User</div>
-                <div class="project-item item5" onclick="showContent(5)">Phần 5: Firewall & Bảo mật</div>
-                <div class="project-item item6" onclick="showContent(6)">Phần 6: Cấu hình DHCP</div>
-                <div class="project-item item7" onclick="showContent(7)">Phần 7: Cấu hình DNS</div>
-                <div class="project-item item8" onclick="showContent(8)">Phần 8: Vận Hành và Khắc Phục Sự Cố</div>
+                    <div class="project-item item1">Phần 1: Tổng quan dự án</div>
+                    <div class="project-item item2">Phần 2: Mô Hình Mạng</div>
+                    <div class="project-item item3">Phần 3: Windows Server</div>
+                    <div class="project-item item4">Phần 4: Quản Lý User</div>
+                    <div class="project-item item5">Phần 5: Firewall & Bảo mật</div>
+                    <div class="project-item item6">Phần 6: Cấu hình DHCP</div>
+                    <div class="project-item item7">Phần 7: Cấu hình DNS</div>
+                    <div class="project-item item8">Phần 8: Vận Hành và Khắc Phục Sự Cố</div>
             </div>
             <!-- Khu vực hiển thị nội dung chi tiết -->
-            <div id="project-content" class="content-box">
-                <h3 id="content-title"></h3>
-                <p id="content-text"></p>
-            </div>
-        </div>
+            <div id="project-content" style="display: none;">
+                <h2 id="content-title">Tiêu đề</h2>
+                <div id="content-text">Mô tả chi tiết nội dung.</div>
+           </div>
     </div>    
 <!--   <script src="script.js"></script>    -->
     <script>
-       document.addEventListener("DOMContentLoaded", function () {
-    function showContent(part) {
-        const title = document.getElementById("content-title");
-        const text = document.getElementById("content-text");
-        const contentBox = document.getElementById("project-content");
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function showContent(part) {
+                const title = document.getElementById("content-title");
+                const text = document.getElementById("content-text");
+                const contentBox = document.getElementById("project-content");
 
-        // Xóa trạng thái active trước đó
-        document.querySelectorAll(".project-item").forEach(item => {
-            item.classList.remove("active-content");
-            item.style.backgroundColor = "transparent";
-        });
+                // Xóa trạng thái active trước đó
+                document.querySelectorAll(".project-item").forEach(item => {
+                    item.classList.remove("active-content");
+                    item.style.backgroundColor = "transparent";
+                });
 
-        // Đánh dấu item được chọn
-        const clickedItem = document.querySelector(`.item${part}`);
-        if (clickedItem) {
-            clickedItem.classList.add("active-content");
-            const borderColor = window.getComputedStyle(clickedItem).borderColor;
-            clickedItem.style.backgroundColor = borderColor;
-        }
-
+                // Đánh dấu item được chọn
+                const clickedItem = document.querySelector(`.item${part}`);
+                if (clickedItem) {
+                    clickedItem.classList.add("active-content");
+                    const borderColor = window.getComputedStyle(clickedItem).borderColor;
+                    clickedItem.style.backgroundColor = borderColor;
+                }
         // Nội dung chi tiết cho từng phần
         const contentData = {
             1: { 
@@ -1095,17 +1094,15 @@
         };
 
         // Cập nhật nội dung hiển thị
-        title.innerText = contentData[part].title;
-        text.innerHTML = contentData[part].text; // Dùng innerHTML để hiển thị nội dung HTML
-        contentBox.style.display = "block";
-    }
+         title.innerText = contentData[part].title;
+                text.innerHTML = contentData[part].text; // Dùng innerHTML để hiển thị nội dung HTML
+                contentBox.style.display = "block"; // Hiển thị phần nội dung chi tiết
+            }
 
-    // Gán sự kiện click cho từng mục dự án
-    document.querySelectorAll(".project-item").forEach((item, index) => {
-        item.addEventListener("click", () => showContent(index + 1));
-    });
-});
-
-        </script>      
+            // Gán sự kiện click cho từng mục dự án
+            document.querySelectorAll(".project-item").forEach((item, index) => {
+                item.addEventListener("click", () => showContent(index + 1));
+            });
+        });   
 </body>
 </html>
